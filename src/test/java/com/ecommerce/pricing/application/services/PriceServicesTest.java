@@ -13,7 +13,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
-import com.ecommerce.pricing.application.services.PriceServices;
 import com.ecommerce.pricing.domain.model.Price;
 import com.ecommerce.pricing.domain.port.out.PricePersistencePort;
 

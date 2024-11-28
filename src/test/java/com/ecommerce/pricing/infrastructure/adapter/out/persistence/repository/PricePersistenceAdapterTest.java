@@ -18,8 +18,6 @@ import com.ecommerce.pricing.domain.model.Price;
 import com.ecommerce.pricing.infrastructure.adapter.out.persistence.entity.BrandEntity;
 import com.ecommerce.pricing.infrastructure.adapter.out.persistence.entity.PriceEntity;
 import com.ecommerce.pricing.infrastructure.adapter.out.persistence.entity.ProductEntity;
-import com.ecommerce.pricing.infrastructure.adapter.out.persistence.repository.PricePersistenceAdapter;
-import com.ecommerce.pricing.infrastructure.adapter.out.persistence.repository.PriceRepository;
 
 public class PricePersistenceAdapterTest {
 	
