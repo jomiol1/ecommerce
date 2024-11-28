@@ -31,7 +31,7 @@ Diagrama relacional de la base de datos
 ---
 ## **Instalación**
 
-###**Pre-requisitos**:
+<bold>Pre-requisitos:</bold>
   - Maven
   - Lombok
   
@@ -62,26 +62,26 @@ Luego de ejecutar el proyecto, podemos visualizar la información de la api a tr
 ### Consulta de precio aplicado
 
 
-###**Endpoint para consultar precio aplicado a un producto especifico**:
+<bold>Endpoint para consultar precio aplicado a un producto especifico:</bold>
 
 ```
 GET /v1/inditex/price   
 
 ```
 
-###**Parámetros de consulta**:
+<bold>Parámetros de consulta:</bold>
   - date (String): (ej. 2020-06-14-18.00.00).
   - productId (Integer): Identificador del producto.
   - brandId (Integer): Identificador de la cadena.
   
-###**Ejemplo de Solicitud**:
+<bold>Ejemplo de Solicitud:</bold>
 
 ```
 curl -X GET "http://localhost:8080/v1/inditex/price?date=2020-06-14-10.00.00&productId=35455&brandId=1"
   
 
 ```
-###**Ejemplo de Respuesta**:
+<bold>Ejemplo de Respuesta:</bold>
 ```
 {
     "id": 1,
