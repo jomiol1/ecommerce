@@ -2,6 +2,9 @@ package com.ecommerce.pricing.infrastructure.adapter.out.persistence.repository;
 
 import java.util.Date;
 
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import com.ecommerce.pricing.domain.exception.PriceNotFound;
@@ -20,9 +23,9 @@ public class PricePersistenceAdapter implements PricePersistencePort {
 	
 	@Override
 	public Price findPriceBetweenDates(Date searchDate, int productId, int brandId) {
-		
-		PriceEntity priceEntity =  priceRepository.findPriceBetweenDates(searchDate, productId, brandId)
-				.orElseThrow(PriceNotFound::new);
+		Pageable pageable = PageRequest.of(0, 1, Sort.by(Sort.Direction.DESC, "priority"));
+		PriceEntity priceEntity = priceRepository.findPriceBetweenDates(searchDate, productId, 
+				brandId, pageable).get().findFirst().orElseThrow(PriceNotFound::new);
 		
 		return PersistenceMapper.toDomainModel(priceEntity);
 	}
