@@ -70,14 +70,14 @@ GET /v1/inditex/price
 ```
 
 <bold>Parámetros de consulta:</bold>
-  - date (String): (ej. 2020-06-14-18.00.00).
+  - date (String): (ej. 2020-06-14T18:00:00).
   - productId (Integer): Identificador del producto.
   - brandId (Integer): Identificador de la cadena.
   
 <bold>Ejemplo de Solicitud:</bold>
 
 ```
-curl -X GET "http://localhost:8080/v1/inditex/price?date=2020-06-14-10.00.00&productId=35455&brandId=1"
+curl -X GET "http://localhost:8080/v1/inditex/price?date=2020-06-14T10:00:00&productId=35455&brandId=1"
   
 
 ```
