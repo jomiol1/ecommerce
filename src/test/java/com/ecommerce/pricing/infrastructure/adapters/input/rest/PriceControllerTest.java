@@ -21,7 +21,7 @@ public class PriceControllerTest {
     @Test
     void testFindPriceBetweenDatesCaseOne() throws Exception {
 
-        mockMvc.perform(get("/v1/inditex/price?date=2020-06-14-10.00.00&productId=35455&brandId=1")
+        mockMvc.perform(get("/v1/inditex/price?date=2020-06-14T10:00:00&productId=35455&brandId=1")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id").value(1))
@@ -34,7 +34,7 @@ public class PriceControllerTest {
     @Test
     void testFindPriceBetweenDatesCaseTwo() throws Exception {
 
-        mockMvc.perform(get("/v1/inditex/price?date=2020-06-14-16.00.00&productId=35455&brandId=1")
+        mockMvc.perform(get("/v1/inditex/price?date=2020-06-14T16:00:00&productId=35455&brandId=1")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id").value(2))
@@ -47,7 +47,7 @@ public class PriceControllerTest {
     @Test
     void testFindPriceBetweenDatesCaseThree() throws Exception {
 
-        mockMvc.perform(get("/v1/inditex/price?date=2020-06-14-21.00.00&productId=35455&brandId=1")
+        mockMvc.perform(get("/v1/inditex/price?date=2020-06-14T21:00:00&productId=35455&brandId=1")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id").value(1))
@@ -60,7 +60,7 @@ public class PriceControllerTest {
     @Test
     void testFindPriceBetweenDatesCaseFour() throws Exception {
 
-        mockMvc.perform(get("/v1/inditex/price?date=2020-06-15-10.00.00&productId=35455&brandId=1")
+        mockMvc.perform(get("/v1/inditex/price?date=2020-06-15T10:00:00&productId=35455&brandId=1")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id").value(3))
@@ -73,7 +73,7 @@ public class PriceControllerTest {
     @Test
     void testFindPriceBetweenDatesCaseFive() throws Exception {
 
-        mockMvc.perform(get("/v1/inditex/price?date=2020-06-16-21.00.00&productId=35455&brandId=1")
+        mockMvc.perform(get("/v1/inditex/price?date=2020-06-16T21:00:00&productId=35455&brandId=1")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id").value(4))
@@ -86,7 +86,7 @@ public class PriceControllerTest {
     @Test
     void testFindPriceBetweenDatesNotFound() throws Exception {
 
-        mockMvc.perform(get("/v1/inditex/price?date=2020-06-14-10.00.00&productId=35455&brandId=3")
+        mockMvc.perform(get("/v1/inditex/price?date=2020-06-14T10:00:00&productId=35455&brandId=3")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isNotFound());
     }
