@@ -41,7 +41,7 @@ public class ExceptionHandler {
 	        .build();
 	  }
 	  
-	  @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+	  @ResponseStatus(HttpStatus.BAD_REQUEST)
 	  @org.springframework.web.bind.annotation.ExceptionHandler(Exception.class)
 	  public ErrorResponse handleGenericError(Exception exception) {
 	    return ErrorResponse.builder()
